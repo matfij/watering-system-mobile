@@ -13,15 +13,13 @@ export class ConfigurationService {
 
   constructor() {}
 
-  public enumToConst(enumObj, options?: { namePrepend?: string, valueProperty?: string, nameProperty?: string }): AppConstant[] {
+  public enumToConst(enumObj, options?: { namePrepend?: string; valueProperty?: string; nameProperty?: string }): AppConstant[] {
     const defaultOptions = { namePrepend: '', valueProperty: 'value', nameProperty: 'name'};
     options = { ...defaultOptions, ...options };
 
-    return Object.keys(enumObj).filter(item => isNaN(Number(item))).map(item => {
-      return {
-        value: enumObj[item],
-        name: options.namePrepend + item
-      };
-    });
+    return Object.keys(enumObj).filter(item => isNaN(Number(item))).map(item => ({
+      value: enumObj[item],
+      name: options.namePrepend + item,
+    }));
   }
 }

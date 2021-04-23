@@ -11,7 +11,7 @@ export class StoreService {
   constructor() {}
 
   public getItem(key: string) {
-    return localStorage.getItem(key)
+    return localStorage.getItem(key);
   }
 
   public setItem(key: string, value: string) {

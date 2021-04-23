@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Page } from 'src/app/models/page.enum';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
+
+  get page() { return Page; }
 
 }

@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { TranslateModule } from '@ngx-translate/core';
+import { ThemeAppModule } from 'src/app/theme-app/theme-app.module';
 
 
 @NgModule({
@@ -14,8 +14,10 @@ import { TranslateModule } from '@ngx-translate/core';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    TranslateModule.forChild(),
+    ThemeAppModule.forChild(),
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,
+  ]
 })
 export class HomePageModule {}

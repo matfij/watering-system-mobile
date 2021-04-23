@@ -1,0 +1,21 @@
+.buttons-wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-button {
+  margin-bottom: 10px;
+
+  ion-icon {
+    font-size: 33px;
+  }
+}
+
+.nav-button-active {
+  ion-icon {
+    font-size: 36px;
+    color: rgb(167,25,49);
+  }
+}

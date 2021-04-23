@@ -1,0 +1,11 @@
+<div class="header-wrapper">
+    <div class="buttons-wrapper">
+
+      <div *ngFor="let item of navigationItems">
+        <button (click)="navigate(item.url)" [ngClass]="{'nav-button-active': activePage == item.page}" class="nav-button">
+          <ion-icon [name]="item.icon"></ion-icon>
+        </button>
+      </div>
+
+    </div>
+</div>
