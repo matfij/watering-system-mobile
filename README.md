@@ -13,3 +13,7 @@ Mobile application for the Watering System project created in Ionic and Angular 
  - run tests: `ng test`
  - start project (browser): `ionic s`
  - start project project (mobile): `ionic cap run android/ions`
+
+## Scripts
+ - translate requires Google Cloud Translation API certificate: https://cloud.google.com/translate and node.js 12.0.0: `npm run translate`
+

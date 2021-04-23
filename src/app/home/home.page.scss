@@ -25,3 +25,23 @@
 #container a {
   text-decoration: none;
 }
+
+ion-header {
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+
+  ion-title {
+      margin-left: -5px;
+
+      font-size: 17px;
+      font-weight: bold;
+      color: #414141;
+  }
+
+  img {
+      width: 50px;
+      margin-left: 10px;
+  }
+}

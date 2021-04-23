@@ -1,0 +1,33 @@
+{
+  "common": {
+    "submit": "Zatwierdź",
+    "confirm": "Potwierdzać",
+    "cancel": "Anuluj",
+    "add": "Dodaj",
+    "clear": "Wyczyść",
+    "back": "Z powrotem",
+    "remove": "Usunąć",
+    "close": "Zamknij",
+    "yes": "Tak",
+    "no": "Nie"
+  },
+  "time": {
+    "hour": "Godzina",
+    "hours": "Godziny",
+    "minute": "Minuta",
+    "minutes": "Minuty",
+    "second": "Sekunda",
+    "seconds": "Sekundy",
+    "day": "Dzień",
+    "days": "Dni",
+    "week": "Tydzień",
+    "weeks": "Tygodni",
+    "month": "Miesiąc",
+    "months": "Miesięcy",
+    "year": "Rok",
+    "years": "Lata"
+  },
+  "app": {
+    "appName": "Inteligentny System Nawadniania"
+  }
+}

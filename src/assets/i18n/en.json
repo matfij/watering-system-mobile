@@ -1,0 +1,33 @@
+{
+  "app": {
+    "appName": "Smart Watering System"
+  },
+  "common": {
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "add": "Add",
+    "clear": "Clear",
+    "back": "Back",
+    "remove": "Remove",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "time": {
+    "hour": "Hour",
+    "hours": "Hours",
+    "minute": "Minute",
+    "minutes": "Minutes",
+    "second": "Second",
+    "seconds": "Seconds",
+    "day": "Day",
+    "days": "Days",
+    "week": "Week",
+    "weeks": "Weeks",
+    "month": "Month",
+    "months": "Months",
+    "year": "Year",
+    "years": "Years"
+  }
+}
