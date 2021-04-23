@@ -1,8 +1,8 @@
 {
   "name": "watering-system-mobile",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "matfij",
+  "homepage": "https://github.com/matfij",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "watering-system-mobile",
+  "appId": "com.matfij.wateringsystem",
+  "appName": "Watering System",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
