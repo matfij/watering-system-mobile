@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AppConstant } from '../models/app-constant.model';
+import { PumpState } from '../models/pump-control-params.model';
 
 
 export const APP_VERSION = '0.1';
-export const AVAILABLE_LANGUAGES = ['en', 'pl'];
+export const AVAILABLE_LANGUAGES = ['en', 'fr', 'de', 'zh', 'pl'];
 export const DEFAULT_LANGUAGE = 'en';
 
 export const MIN_HUMIDITY_RANGE = 1;
@@ -27,9 +28,11 @@ export const WHITE_RGB = 'rgba(255, 255, 255, 1)';
 })
 export class ConfigurationService {
 
+  pumpStatusChoice = this.enumToConst(PumpState, {namePrepend: 'control.pumpStatus.'});
+
   constructor() {}
 
-  public enumToConst(enumObj, options?: { namePrepend?: string; valueProperty?: string; nameProperty?: string }): AppConstant[] {
+  enumToConst(enumObj, options?: { namePrepend?: string; valueProperty?: string; nameProperty?: string }): AppConstant[] {
     const defaultOptions = { namePrepend: '', valueProperty: 'value', nameProperty: 'name'};
     options = { ...defaultOptions, ...options };
 

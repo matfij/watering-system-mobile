@@ -17,7 +17,7 @@ export class UtilitiesService {
 
     const toast = await this.toastController.create({
       message,
-      duration
+      duration,
     });
     toast.present();
   }

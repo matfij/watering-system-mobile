@@ -1,8 +1,37 @@
 <ion-content [fullscreen]="true">
+  <div class="page-wrapper">
 
-  <div id="container">
-    <strong>CONTROL PAGE</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="form-wrapper">
+      <div class="header">{{ 'control.pumpsControl' | translate }}</div>
+
+      <div class="info-label">
+        {{ 'control.selectPump' | translate }}
+      </div>
+      <ion-select #selectedPumpSelect (ionChange)="pumpSelected(selectedPumpSelect.value)"
+      class="std-dropdown" cancelText="{{ 'common.cancel' | translate }}" okText="{{ 'common.confirm' | translate }}">
+        <ion-select-option *ngFor="let pump of availablePumps" [value]="pump.id">
+          {{ pump.name }}
+        </ion-select-option>
+      </ion-select>
+      <div *ngIf="selectedPump" class="info-label current-status-label">
+        {{ ('control.pumpStatusLabel' | translate) + ': ' + getPumpStateName(selectedPump.state) }}
+      </div>
+
+      <div class="info-label status-label">
+        {{ 'control.updatePumpStatus' | translate }}
+      </div>
+      <ion-select #selectedStateSelect
+      class="std-dropdown" cancelText="{{ 'common.cancel' | translate }}" okText="{{ 'common.confirm' | translate }}">
+        <ion-select-option *ngFor="let status of pumpStatusChoice" [value]="status.value">
+          {{ status.name | translate }}
+        </ion-select-option>
+      </ion-select>
+
+      <button class="update-btn" type="button" (click)="sendPumpControlSignal(selectedStateSelect.value)">
+        {{ 'common.confirm' | translate }}
+      </button>
+
+    </div>
+
   </div>
-
 </ion-content>

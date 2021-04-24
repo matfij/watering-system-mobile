@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { AVAILABLE_LANGUAGES } from 'src/app/services/configuration.service';
+import { AVAILABLE_LANGUAGES, DEFAULT_LANGUAGE } from 'src/app/services/configuration.service';
 import { LANG, StoreService } from 'src/app/services/store.service';
 
 @Component({
@@ -19,7 +19,7 @@ export class SettingsPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.selectedLanguage = this.storeService.getItem(LANG);
+    this.selectedLanguage = DEFAULT_LANGUAGE;
   }
 
   updateLanguage(lang: string) {

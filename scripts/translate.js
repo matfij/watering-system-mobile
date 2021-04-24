@@ -2,8 +2,8 @@ const exec = require('child_process').exec;
 const fs = require('fs');
 
 const MAIN_PATH = 'src/assets/i18n/';
-const SOURCE_FILES = ['en.json', 'pl.json'];
-const TARGET_FOLDERS = ['en', 'pl'];
+const SOURCE_FILES = ['en.json', 'fr.json', 'de.json', 'zh.json', 'pl.json'];
+const TARGET_FOLDERS = ['en', 'fr', 'de', 'zh', 'pl'];
 
 function copyFiles(path, sourceFiles, targetFolders) {
 

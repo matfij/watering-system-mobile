@@ -1,0 +1,41 @@
+@import "../../../theme/colors.scss";
+
+
+.page-wrapper {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  overflow-y: hidden;
+}
+
+.current-status-label {
+  margin-top: 5px;
+  color: $app-red-1;
+}
+
+.status-label {
+  margin-top: 35px;
+}
+
+.form-wrapper {
+  margin-top: -50px;
+  display: block;
+}
+
+.update-btn {
+  width: 245px;
+  height: 35px;
+  margin-top: 90px;
+
+  background-color: $app-red-1;
+  box-shadow: 0px 3px 6px $app-dark-1;
+  border-radius: 17px;
+  letter-spacing: 1px;
+  color: $app-white-1;
+  font-size: 16px;
+  font-weight: 500;
+}

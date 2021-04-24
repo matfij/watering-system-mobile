@@ -12,7 +12,11 @@
     "remove": "Remove",
     "close": "Close",
     "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "update": "Update"
+  },
+  "messages": {
+    "enerAllRequiredData": "Enter all required data"
   },
   "time": {
     "hour": "Hour",
@@ -39,5 +43,16 @@
   "settings": {
     "appSettings": "App settings",
     "changeLanguage": "Change language"
+  },
+  "control": {
+    "pumpsControl": "Pump control",
+    "selectPump": "Select pump",
+    "updatePumpStatus": "Update pump status",
+    "changeStatus": "Change status",
+    "pumpStatusLabel": "Pump status",
+    "pumpStatus": {
+      "stop": "Off",
+      "start": "On"
+    }
   }
 }

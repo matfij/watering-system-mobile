@@ -5,7 +5,8 @@ import { environment } from 'src/environments/environment';
 import { GetHumidityParams } from '../models/get-humidity-params.model';
 import { HumiditySample } from '../models/humidity-sample.model';
 import { Plant } from '../models/plant.model';
-import { PumpControlParams } from '../models/pump-control-params.model';
+import { PumpControlParams, PumpState } from '../models/pump-control-params.model';
+import { Pump } from '../models/pump.model';
 import { StatusMessage } from '../models/status-message.model';
 import { UtilitiesService } from './utilities.service';
 
@@ -14,7 +15,7 @@ import { UtilitiesService } from './utilities.service';
 })
 export class ApiService {
 
-  baseUrl: string = environment.apiUrl;
+  private baseUrl: string = environment.apiUrl;
 
   constructor(
     private utilitiesService: UtilitiesService,
@@ -29,6 +30,11 @@ export class ApiService {
   getHistoricalHumidity(params: GetHumidityParams): Observable<HumiditySample[]> {
     const url = this.baseUrl + 'humidity';
     return this.httpClient.post<HumiditySample[]>(url, params);
+  }
+
+  getAvailablePumps(): Observable<Pump[]> {
+    const url = this.baseUrl + 'pumps';
+    return this.httpClient.get<Pump[]>(url);
   }
 
   sendPumpControlSignal(params: PumpControlParams): Observable<StatusMessage> {
@@ -59,6 +65,15 @@ export class ApiService {
       { id: 10, value: 13 },
       { id: 11, value: 12.5 },
       { id: 12, value: 12, date: '3:00' },
+    ];
+    return of(response);
+  }
+
+  getAvailablePumpsMock(): Observable<Pump[]> {
+    const response: Pump[] = [
+      { id: 0, name: 'Plant A', state: PumpState.stop },
+      { id: 1, name: 'Plant C', state: PumpState.stop },
+      { id: 2, name: 'Plant D', state: PumpState.start },
     ];
     return of(response);
   }
