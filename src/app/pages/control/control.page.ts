@@ -48,7 +48,6 @@ export class ControlPage implements OnInit {
 
   pumpSelected(id: number) {
     this.selectedPump = this.availablePumps.find(p => p.id === id);
-    console.log(this.selectedPump);
   }
 
   getPumpStateName(state: PumpState) {

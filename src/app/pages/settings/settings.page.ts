@@ -19,7 +19,7 @@ export class SettingsPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.selectedLanguage = DEFAULT_LANGUAGE;
+    this.selectedLanguage = this.storeService.getItem(LANG);
   }
 
   updateLanguage(lang: string) {

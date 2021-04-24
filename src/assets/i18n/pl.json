@@ -9,7 +9,8 @@
     "remove": "Usunąć",
     "close": "Zamknij",
     "yes": "Tak",
-    "no": "Nie"
+    "no": "Nie",
+    "update": "Aktualizacja"
   },
   "time": {
     "hour": "Godzina",
@@ -29,5 +30,30 @@
   },
   "app": {
     "appName": "Inteligentny System Nawadniania"
+  },
+  "messages": {
+    "enerAllRequiredData": "Wprowadź wszystkie wymagane dane"
+  },
+  "home": {
+    "humidityLevelMonitoring": "Monitorowanie poziomu wilgotności",
+    "selectPlant": "Wybierz roślinę",
+    "hourInterval": "Przedział godzinowy",
+    "displayTimeInfo": "Wyświetlanie danych dla",
+    "humidityLevel": "Poziom wilgotności [%]"
+  },
+  "settings": {
+    "appSettings": "Ustawienia aplikacji",
+    "changeLanguage": "Zmień język"
+  },
+  "control": {
+    "pumpsControl": "Sterowanie pompą",
+    "selectPump": "Wybierz pompę",
+    "updatePumpStatus": "Zaktualizuj stan pompy",
+    "changeStatus": "Zmień status",
+    "pumpStatusLabel": "Stan pompy",
+    "pumpStatus": {
+      "stop": "Poza",
+      "start": "Na"
+    }
   }
 }

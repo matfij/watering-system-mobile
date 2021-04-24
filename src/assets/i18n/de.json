@@ -1,3 +1,59 @@
 {
-
+  "app": {
+    "appName": "Intelligentes Bewässerungssystem"
+  },
+  "common": {
+    "submit": "einreichen",
+    "confirm": "Bestätigen",
+    "cancel": "Stornieren",
+    "add": "Hinzufügen",
+    "clear": "klar",
+    "back": "Zurück",
+    "remove": "Entfernen",
+    "close": "Schließen",
+    "yes": "Ja",
+    "no": "Nein",
+    "update": "Aktualisieren"
+  },
+  "messages": {
+    "enerAllRequiredData": "Geben Sie alle erforderlichen Daten ein"
+  },
+  "time": {
+    "hour": "Stunde",
+    "hours": "Std",
+    "minute": "Minute",
+    "minutes": "Protokoll",
+    "second": "Zweite",
+    "seconds": "Sekunden",
+    "day": "Tag",
+    "days": "Tage",
+    "week": "Woche",
+    "weeks": "Wochen",
+    "month": "Monat",
+    "months": "Monate",
+    "year": "Jahr",
+    "years": "Jahre"
+  },
+  "home": {
+    "humidityLevelMonitoring": "Überwachung des Feuchtigkeitsniveaus",
+    "selectPlant": "Pflanze auswählen",
+    "hourInterval": "Stundenintervall",
+    "displayTimeInfo": "Anzeigen von Daten für",
+    "humidityLevel": "Luftfeuchtigkeit [%]"
+  },
+  "settings": {
+    "appSettings": "App Einstellungen",
+    "changeLanguage": "Sprache ändern"
+  },
+  "control": {
+    "pumpsControl": "Pumpensteuerung",
+    "selectPump": "Pumpe auswählen",
+    "updatePumpStatus": "Pumpenstatus aktualisieren",
+    "changeStatus": "Status ändern",
+    "pumpStatusLabel": "Pumpenstatus",
+    "pumpStatus": {
+      "stop": "aus",
+      "start": "Auf"
+    }
+  }
 }

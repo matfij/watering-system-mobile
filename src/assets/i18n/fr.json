@@ -1,3 +1,59 @@
 {
-
+  "app": {
+    "appName": "Système d'arrosage intelligent"
+  },
+  "common": {
+    "submit": "Soumettre",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "add": "Ajouter",
+    "clear": "Dégager",
+    "back": "Dos",
+    "remove": "Supprimer",
+    "close": "Fermer",
+    "yes": "Oui",
+    "no": "Non",
+    "update": "Mettre à jour"
+  },
+  "messages": {
+    "enerAllRequiredData": "Entrez toutes les données requises"
+  },
+  "time": {
+    "hour": "Heure",
+    "hours": "Les heures",
+    "minute": "Minute",
+    "minutes": "Minutes",
+    "second": "Deuxième",
+    "seconds": "Secondes",
+    "day": "Jour",
+    "days": "Journées",
+    "week": "Semaine",
+    "weeks": "Semaines",
+    "month": "Mois",
+    "months": "Mois",
+    "year": "An",
+    "years": "Années"
+  },
+  "home": {
+    "humidityLevelMonitoring": "Surveillance du niveau d'humidité",
+    "selectPlant": "Sélectionnez une plante",
+    "hourInterval": "Intervalle d'heures",
+    "displayTimeInfo": "Affichage des données pour",
+    "humidityLevel": "Niveau d'humidité [%]"
+  },
+  "settings": {
+    "appSettings": "Paramètres de l'application",
+    "changeLanguage": "Changer de langue"
+  },
+  "control": {
+    "pumpsControl": "Contrôle de la pompe",
+    "selectPump": "Sélectionnez la pompe",
+    "updatePumpStatus": "Mettre à jour l'état de la pompe",
+    "changeStatus": "Changer de statut",
+    "pumpStatusLabel": "État de la pompe",
+    "pumpStatus": {
+      "stop": "Désactivé",
+      "start": "Au"
+    }
+  }
 }

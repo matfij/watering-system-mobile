@@ -26,6 +26,9 @@
 
     <app-spinner *ngIf="getAvailablePlantsLoading && !getPlantHumidityLoading"></app-spinner>
     <div *ngIf="plantHumidityData && plantHumidityData.length > 0" class="chart-wrapper">
+      <div class="info-label chart-title">
+        {{ ('home.humidityLevel' | translate) }}
+      </div>
       <canvas
         baseChart
         class="chart"

@@ -1,3 +1,59 @@
 {
-
+  "app": {
+    "appName": "智能浇水系统"
+  },
+  "common": {
+    "submit": "提交",
+    "confirm": "确认",
+    "cancel": "取消",
+    "add": "添加",
+    "clear": "清除",
+    "back": "后退",
+    "remove": "去掉",
+    "close": "关闭",
+    "yes": "是的",
+    "no": "不",
+    "update": "更新"
+  },
+  "messages": {
+    "enerAllRequiredData": "输入所有必填数据"
+  },
+  "time": {
+    "hour": "小时",
+    "hours": "小时",
+    "minute": "分钟",
+    "minutes": "分钟",
+    "second": "第二",
+    "seconds": "秒",
+    "day": "日",
+    "days": "天",
+    "week": "星期",
+    "weeks": "周数",
+    "month": "月",
+    "months": "月数",
+    "year": "年",
+    "years": "年"
+  },
+  "home": {
+    "humidityLevelMonitoring": "湿度监控",
+    "selectPlant": "选择工厂",
+    "hourInterval": "小时间隔",
+    "displayTimeInfo": "显示数据",
+    "humidityLevel": "湿度水平[％]"
+  },
+  "settings": {
+    "appSettings": "应用程式设定",
+    "changeLanguage": "改变语言"
+  },
+  "control": {
+    "pumpsControl": "泵控制",
+    "selectPump": "选择泵",
+    "updatePumpStatus": "更新泵状态",
+    "changeStatus": "变更状态",
+    "pumpStatusLabel": "泵状态",
+    "pumpStatus": {
+      "stop": "离开",
+      "start": "上"
+    }
+  }
 }
