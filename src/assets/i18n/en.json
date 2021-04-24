@@ -29,5 +29,11 @@
     "months": "Months",
     "year": "Year",
     "years": "Years"
+  },
+  "home": {
+    "humidityLevelMonitoring": "Humidity level monitoring",
+    "selectPlant": "Select plant",
+    "hourInterval": "Hour interval",
+    "displayTimeInfo": "Displaying data for"
   }
 }

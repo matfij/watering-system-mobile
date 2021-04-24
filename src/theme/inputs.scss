@@ -1,0 +1,70 @@
+@import './colors.scss';
+
+
+ion-select {
+  --placeholder-color: $app-dark-1;
+  --placeholder-opacity: 1;
+  --padding-top: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  color: $app-dark-1;
+  font-size: 13px;
+  opacity: 1 !important;
+}
+
+.std-dropdown {
+  width: 245px;
+  height: 28px;
+  margin: 24px auto 0 auto;
+
+  text-align: left;
+  border-radius: 9px;
+  color: $app-dark-1;
+  background-color: $app-white-1;
+  padding: 5px 15px;
+  border: 2px solid $app-dark-1;
+}
+
+.select-icon-inner {
+  --color: $app-dark-1;
+}
+
+.std-dropdown-content {
+  margin-top: 0px;
+  max-width: 204px;
+  height: 28px;
+
+  text-align: left;
+  padding: 0px 5px 0 14px;
+  width: initial;
+  flex-grow: 1;
+
+  overflow: hidden;
+  border-radius: 11px 0 0 11px;
+  background-color: $app-white-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 28px;
+
+  ion-select {
+      margin-top: 10px;
+      flex-grow: 1;
+      color: $app-dark-1;
+  }
+}
+
+ion-range {
+  width: 245px;
+  height: 28px;
+
+  border-radius: 9px;
+  border: 2px solid $app-dark-1;
+  --bar-background: #1e1e1e;
+  --bar-background-active: #006a3c;
+
+  ion-label {
+    color: $app-dark-1;
+    font-size: 13px;
+  }
+}

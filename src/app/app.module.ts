@@ -12,6 +12,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LANG, StoreService } from './services/store.service';
 import { AVAILABLE_LANGUAGES, DEFAULT_LANGUAGE } from './services/configuration.service';
+import { BottomHeaderComponent } from './components/bottom-header/bottom-header.component';
+import { TopHeaderComponent } from './components/top-header/top-header.component';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -21,6 +23,8 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+    BottomHeaderComponent,
+    TopHeaderComponent,
   ],
   entryComponents: [],
   imports: [
@@ -54,8 +58,8 @@ export class AppModule {
   ) {
     _translateService.setDefaultLang(DEFAULT_LANGUAGE);
     _translateService.addLangs(AVAILABLE_LANGUAGES);
-    _translateService.use('en');
     _translateService.use('pl');
+    _translateService.use('en');
 
     const lang = _storeService.getItem(LANG);
     _translateService.use(lang ? lang : DEFAULT_LANGUAGE);

@@ -2,7 +2,7 @@
     <div class="buttons-wrapper">
 
       <div *ngFor="let item of navigationItems">
-        <button (click)="navigate(item.url)" [ngClass]="{'nav-button-active': activePage == item.page}" class="nav-button">
+        <button (click)="navigate(item.url, item.page)" [ngClass]="{'nav-button-active': activePage == item.page}" class="nav-button">
           <ion-icon [name]="item.icon"></ion-icon>
         </button>
       </div>

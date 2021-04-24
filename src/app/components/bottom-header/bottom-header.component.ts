@@ -28,18 +28,19 @@ export class BottomHeaderComponent implements OnInit {
     },
   ];
 
+  get page() { return Page; }
+
   constructor(
     private navController: NavController
   ) {}
 
-  ngOnInit() {}
-
-  get page() {
-    return Page;
+  ngOnInit() {
+    this.activePage = Page.home;
   }
 
-  navigate(url: string) {
+  navigate(url: string, page: Page) {
     this.navController.navigateForward([url]);
+    this.activePage = page;
   }
 
 }

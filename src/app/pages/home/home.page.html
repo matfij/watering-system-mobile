@@ -1,12 +1,41 @@
-<app-top-header></app-top-header>
-
 <ion-content [fullscreen]="true">
+  <div class="page-wrapper">
 
-  <div id="container">
-    <strong>HOME PAGE</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <app-spinner *ngIf="getAvailablePlantsLoading"></app-spinner>
+    <div *ngIf="selectedPlant" class="form-wrapper">
+      <div class="header">{{ 'home.humidityLevelMonitoring' | translate }}</div>
+
+      <div class="info-label">
+        {{ 'home.selectPlant' | translate }}
+      </div>
+      <ion-select #selectedItemId (ionChange)="plantSelectionChanged(selectedItemId.value, hourRange.value)" [value]="selectedPlant.id" class="std-dropdown">
+        <ion-select-option *ngFor="let plant of availablePlants" [value]="plant.id">
+          {{ plant.name }}
+        </ion-select-option>
+      </ion-select>
+
+      <div class="info-label range-label">
+        {{ 'home.hourInterval' | translate }}
+      </div>
+      <ion-range #hourRange (ionChange)="plantSelectionChanged(selectedItemId.value, hourRange.value)" [min]="minHumidityRange" [max]="maxHumidityRange">
+        <ion-label slot="start">{{ minHumidityRange }}</ion-label>
+        <ion-label slot="end">{{ maxHumidityRange }}</ion-label>
+      </ion-range>
+    </div>
+
+    <app-spinner *ngIf="getAvailablePlantsLoading && !getPlantHumidityLoading"></app-spinner>
+    <div *ngIf="plantHumidityData && plantHumidityData.length > 0" class="chart-wrapper">
+      <canvas
+        baseChart
+        class="chart"
+        chartType="line"
+        [datasets]="plantHumidityData"
+        [labels]="plantHumidityLabels">
+      </canvas>
+      <div class="info-label">
+        {{ ('home.displayTimeInfo' | translate) + ': ' + dateRange }}
+      </div>
+    </div>
+
   </div>
-
 </ion-content>
-
-<app-bottom-header [activePage]="page.home"></app-bottom-header>
