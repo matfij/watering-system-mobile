@@ -6,9 +6,8 @@ import { Plant } from 'src/app/models/plant.model';
 import { ApiService } from 'src/app/services/api.service';
 import { ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
-import { TranslateService } from '@ngx-translate/core';
-import { HUMIDITY_WARN_LEVEL, MAX_HUMIDITY_RANGE, MIN_HUMIDITY_RANGE } from 'src/app/services/configuration.service';
-import { BLACK_LIGHT_RGB, BLACK_RGB, GREEN_LIGHT_RGB, GREEN_RGB, RED_RGB } from 'src/app/services/configuration.service';
+// eslint-disable-next-line max-len
+import { DEFAULT_HUMIDITY_RANGE, HUMIDITY_WARN_LEVEL, MAX_HUMIDITY_RANGE, MIN_HUMIDITY_RANGE, BLACK_LIGHT_RGB, BLACK_RGB, GREEN_LIGHT_RGB, GREEN_RGB, RED_RGB } from 'src/app/services/configuration.service';
 
 @Component({
   selector: 'app-home',
@@ -33,7 +32,6 @@ export class HomePage {
 
   constructor(
     private apiService: ApiService,
-    private translateService: TranslateService,
   ) {}
 
   ionViewDidEnter() {
@@ -55,7 +53,7 @@ export class HomePage {
     });
   }
 
-  getPlantHumidity(id: number, name: string, hours: number = 100) {
+  getPlantHumidity(id: number, name: string, hours: number = DEFAULT_HUMIDITY_RANGE) {
     const params: GetHumidityParams = {
       plantId: id,
       samples: hours
@@ -96,7 +94,7 @@ export class HomePage {
     this.dateRange = samples[0].date + ' - ' + samples[samples.length - 1].date;
   }
 
-  plantSelectionChanged(plantId: number, hours: number = 100) {
+  plantSelectionChanged(plantId: number, hours: number = DEFAULT_HUMIDITY_RANGE) {
     const plantName = this.availablePlants.find(p => p.id === plantId).name;
     console.log(plantId, plantName, hours);
     this.getPlantHumidity(plantId, plantName, hours);

@@ -8,6 +8,7 @@ export const DEFAULT_LANGUAGE = 'en';
 
 export const MIN_HUMIDITY_RANGE = 1;
 export const MAX_HUMIDITY_RANGE = 200;
+export const DEFAULT_HUMIDITY_RANGE = 100;
 export const HUMIDITY_WARN_LEVEL = 11;
 
 export const RED_HEX = '#006a3c';

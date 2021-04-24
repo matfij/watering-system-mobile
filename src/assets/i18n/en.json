@@ -35,5 +35,9 @@
     "selectPlant": "Select plant",
     "hourInterval": "Hour interval",
     "displayTimeInfo": "Displaying data for"
+  },
+  "settings": {
+    "appSettings": "App settings",
+    "changeLanguage": "Change language"
   }
 }

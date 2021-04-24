@@ -1,8 +1,20 @@
 <ion-content [fullscreen]="true">
+  <div class="page-wrapper">
 
-  <div id="container">
-    <strong>SETTINGS PAGE</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="form-wrapper">
+      <div class="header">{{ 'settings.appSettings' | translate }}</div>
+
+      <div class="info-label">
+        {{ 'settings.changeLanguage' | translate }}
+      </div>
+      <ion-select #selectedLanguageSelect (ionChange)="updateLanguage(selectedLanguageSelect.value)" [(ngModel)]="selectedLanguage"
+      class="std-dropdown" cancelText="{{ 'common.cancel' | translate }}" okText="{{ 'common.confirm' | translate }}">
+        <ion-select-option *ngFor="let language of availableLanguages" [value]="language.value">
+          {{ language.name }}
+        </ion-select-option>
+      </ion-select>
+
+    </div>
+
   </div>
-
 </ion-content>

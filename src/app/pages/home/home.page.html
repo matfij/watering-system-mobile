@@ -8,7 +8,8 @@
       <div class="info-label">
         {{ 'home.selectPlant' | translate }}
       </div>
-      <ion-select #selectedItemId (ionChange)="plantSelectionChanged(selectedItemId.value, hourRange.value)" [value]="selectedPlant.id" class="std-dropdown">
+      <ion-select #selectedItemId (ionChange)="plantSelectionChanged(selectedItemId.value, hourRange.value)" [value]="selectedPlant.id"
+      class="std-dropdown" cancelText="{{ 'common.cancel' | translate }}" okText="{{ 'common.confirm' | translate }}">
         <ion-select-option *ngFor="let plant of availablePlants" [value]="plant.id">
           {{ plant.name }}
         </ion-select-option>

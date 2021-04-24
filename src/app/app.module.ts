@@ -53,15 +53,20 @@ export function createTranslateLoader(http: HttpClient) {
 export class AppModule {
 
   constructor(
-    _storeService: StoreService,
-    _translateService: TranslateService,
+    storeService: StoreService,
+    translateService: TranslateService,
   ) {
-    _translateService.setDefaultLang(DEFAULT_LANGUAGE);
-    _translateService.addLangs(AVAILABLE_LANGUAGES);
-    _translateService.use('pl');
-    _translateService.use('en');
+    translateService.setDefaultLang(DEFAULT_LANGUAGE);
+    translateService.addLangs(AVAILABLE_LANGUAGES);
+    translateService.use('pl');
+    translateService.use('en');
 
-    const lang = _storeService.getItem(LANG);
-    _translateService.use(lang ? lang : DEFAULT_LANGUAGE);
+    const lang = storeService.getItem(LANG);
+    if (lang) {
+      translateService.use(lang);
+    } else {
+      translateService.use(DEFAULT_LANGUAGE);
+      storeService.setItem(LANG, DEFAULT_LANGUAGE);
+    }
   }
 }
