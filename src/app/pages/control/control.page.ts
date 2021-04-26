@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Page } from 'src/app/models/page.enum';
 import { PumpControlParams, PumpState } from 'src/app/models/pump-control-params.model';
 import { Pump } from 'src/app/models/pump.model';
 import { StatusMessage } from 'src/app/models/status-message.model';
@@ -37,7 +36,7 @@ export class ControlPage implements OnInit {
 
   getAvailablePumps() {
     this.getAvailablePumpsLoading = true;
-    this.apiService.getAvailablePumpsMock().subscribe((pumps: Pump[]) => {
+    this.apiService.getAvailablePumps().subscribe((pumps: Pump[]) => {
       this.getAvailablePumpsLoading = false;
       this.availablePumps = pumps;
     }, error => {
@@ -55,17 +54,17 @@ export class ControlPage implements OnInit {
     return this.translateService.instant(resName);
   }
 
-  sendPumpControlSignal(state: PumpState) {
-    if (this.selectedPump && (state || state === 0)) {
+  sendPumpControlSignal(newState: PumpState) {
+    if (this.selectedPump && (newState || newState === 0)) {
       const params: PumpControlParams = {
         id: this.selectedPump.id,
-        command: state
+        state: newState
       };
       this.sendPumpControlSignalLoading = true;
-      this.apiService.sendPumpControlSignalMock(params).subscribe((message: StatusMessage) => {
+      this.apiService.sendPumpControlSignal(params).subscribe((_: StatusMessage) => {
         this.sendPumpControlSignalLoading = false;
-        this.selectedPump.state = state;
-        this.utilitiesService.presentToast(message.message);
+        this.selectedPump.state = newState;
+        this.utilitiesService.presentToast('control.updatePumpStatus');
       }, error => {
         this.sendPumpControlSignalLoading = false;
         console.log(error);

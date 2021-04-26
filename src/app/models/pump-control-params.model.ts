@@ -1,6 +1,6 @@
 export interface PumpControlParams {
   id: number;
-  command: PumpState;
+  state: PumpState;
   date?: string;
 }
 

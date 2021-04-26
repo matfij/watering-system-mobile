@@ -7,7 +7,7 @@ import { ApiService } from 'src/app/services/api.service';
 import { ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
 // eslint-disable-next-line max-len
-import { DEFAULT_HUMIDITY_RANGE, HUMIDITY_WARN_LEVEL, MAX_HUMIDITY_RANGE, MIN_HUMIDITY_RANGE, BLACK_LIGHT_RGB, BLACK_RGB, GREEN_LIGHT_RGB, GREEN_RGB, RED_RGB } from 'src/app/services/configuration.service';
+import { DEFAULT_HUMIDITY_RANGE, HUMIDITY_WARN_LEVEL, MAX_HUMIDITY_RANGE, MIN_HUMIDITY_RANGE, BLACK_LIGHT_RGB, BLACK_RGB, GREEN_LIGHT_RGB, GREEN_RGB, RED_RGB, DATE_PLACEHOLDER } from 'src/app/services/configuration.service';
 
 @Component({
   selector: 'app-home',
@@ -41,7 +41,7 @@ export class HomePage {
 
   getAvailablePlants() {
     this.getAvailablePlantsLoading = true;
-    this.apiService.getAvailablePlantsMock().subscribe((plants: Plant[]) => {
+    this.apiService.getAvailablePlants().subscribe((plants: Plant[]) => {
       this.getAvailablePlantsLoading = false;
       this.availablePlants = plants;
 
@@ -59,7 +59,7 @@ export class HomePage {
       samples: hours
     };
     this.getPlantHumidityLoading = true;
-    this.apiService.getHistoricalHumidityMock(params).subscribe((samples: HumiditySample[]) => {
+    this.apiService.getHistoricalHumidity(params).subscribe((samples: HumiditySample[]) => {
       this.getPlantHumidityLoading = false;
       this.plantHumiditySamples = samples;
 
@@ -91,7 +91,14 @@ export class HomePage {
       }
     ];
     this.plantHumidityLabels = labels;
-    this.dateRange = samples[0].date + ' - ' + samples[samples.length - 1].date;
+
+    if (samples.length > 0) {
+      const start = samples[0].date ? samples[0].date : DATE_PLACEHOLDER;
+      const end = samples[samples.length - 1].date ? samples[samples.length - 1].date : DATE_PLACEHOLDER;
+      this.dateRange = start + ' - ' + end;
+    } else {
+      this.dateRange = '-';
+    }
   }
 
   plantSelectionChanged(plantId: number, hours: number = DEFAULT_HUMIDITY_RANGE) {

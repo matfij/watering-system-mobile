@@ -27,7 +27,8 @@
         </ion-select-option>
       </ion-select>
 
-      <button class="update-btn" type="button" (click)="sendPumpControlSignal(selectedStateSelect.value)">
+      <app-spinner *ngIf="sendPumpControlSignalLoading" class="update-spinner"></app-spinner>
+      <button *ngIf="!sendPumpControlSignalLoading" (click)="sendPumpControlSignal(selectedStateSelect.value)" class="update-btn" type="button" >
         {{ 'common.confirm' | translate }}
       </button>
 

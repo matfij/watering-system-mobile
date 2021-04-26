@@ -58,10 +58,10 @@ export class AppModule {
   ) {
     translateService.setDefaultLang(DEFAULT_LANGUAGE);
     translateService.addLangs(AVAILABLE_LANGUAGES);
-    translateService.use('pl');
-    translateService.use('de');
-    translateService.use('fr');
-    translateService.use('zh');
+    // translateService.use('pl');
+    // translateService.use('de');
+    // translateService.use('fr');
+    // translateService.use('zh');
     translateService.use('en');
 
     const lang = storeService.getItem(LANG);

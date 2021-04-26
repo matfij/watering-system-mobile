@@ -39,7 +39,8 @@
     "selectPlant": "Select plant",
     "hourInterval": "Hour interval",
     "humidityLevel": "Humidity level [%]",
-    "displayTimeInfo": "Displaying data for"
+    "displayTimeInfo": "Displaying data for",
+    "samples": "Samples"
   },
   "settings": {
     "appSettings": "App settings",
