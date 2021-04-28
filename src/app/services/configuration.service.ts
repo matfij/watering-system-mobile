@@ -8,7 +8,7 @@ export const AVAILABLE_LANGUAGES = ['en', 'fr', 'de', 'zh', 'pl'];
 export const DEFAULT_LANGUAGE = 'en';
 
 export const MIN_HUMIDITY_RANGE = 1;
-export const MAX_HUMIDITY_RANGE = 200;
+export const MAX_HUMIDITY_RANGE = 500;
 export const DEFAULT_HUMIDITY_RANGE = 100;
 export const HUMIDITY_WARN_LEVEL = 5;
 

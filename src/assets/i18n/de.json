@@ -39,7 +39,8 @@
     "selectPlant": "Pflanze auswählen",
     "hourInterval": "Stundenintervall",
     "displayTimeInfo": "Anzeigen von Daten für",
-    "humidityLevel": "Luftfeuchtigkeit [%]"
+    "humidityLevel": "Luftfeuchtigkeit [%]",
+    "samples": "Proben"
   },
   "settings": {
     "appSettings": "App Einstellungen",

@@ -71,6 +71,7 @@ export class HomePage {
   }
 
   updateChartData(samples: HumiditySample[], name: string) {
+    samples = samples.reverse();
     const values = samples.map(sample => sample.value);
     const labels = samples.map(_ => '');
     const statusColors = samples.map(sample => sample.value < HUMIDITY_WARN_LEVEL ? RED_RGB : GREEN_RGB);
