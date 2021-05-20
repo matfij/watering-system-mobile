@@ -94,7 +94,7 @@ export class HomePage {
     this.plantHumidityLabels = labels;
 
     if (samples.length > 0) {
-      const start = samples[0].date ? samples[0].date : DATE_PLACEHOLDER;
+      const start = samples[0].date ? samples[0].date.replace('ď»ż', '') : DATE_PLACEHOLDER;
       const end = samples[samples.length - 1].date ? samples[samples.length - 1].date : DATE_PLACEHOLDER;
       this.dateRange = start + ' - ' + end;
     } else {
@@ -104,7 +104,6 @@ export class HomePage {
 
   plantSelectionChanged(plantId: number, hours: number = DEFAULT_HUMIDITY_RANGE) {
     const plantName = this.availablePlants.find(p => p.id === plantId).name;
-    console.log(plantId, plantName, hours);
     this.getPlantHumidity(plantId, plantName, hours);
   }
 

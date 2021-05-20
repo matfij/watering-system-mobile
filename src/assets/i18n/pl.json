@@ -39,7 +39,7 @@
     "selectPlant": "Wybierz roślinę",
     "hourInterval": "Przedział godzinowy",
     "displayTimeInfo": "Wyświetlanie danych dla",
-    "humidityLevel": "Poziom wilgotności [%]",
+    "humidityLevel": "Poziom wilgotności [0 - 10]",
     "samples": "Próbki"
   },
   "settings": {

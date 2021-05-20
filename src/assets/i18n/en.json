@@ -38,7 +38,7 @@
     "humidityLevelMonitoring": "Humidity level monitoring",
     "selectPlant": "Select plant",
     "hourInterval": "Hour interval",
-    "humidityLevel": "Humidity level [%]",
+    "humidityLevel": "Humidity level [0 - 10]",
     "displayTimeInfo": "Displaying data for",
     "samples": "Samples"
   },

@@ -24,20 +24,23 @@
       </ion-range>
     </div>
 
-    <app-spinner *ngIf="!getAvailablePlantsLoading && getPlantHumidityLoading" class="chart-spinner"></app-spinner>
-    <div *ngIf="!getPlantHumidityLoading && plantHumidityData && plantHumidityData.length > 0" class="chart-wrapper">
-      <div class="info-label chart-title">
-        {{ ('home.humidityLevel' | translate) }}
-      </div>
-      <canvas
-        baseChart
-        class="chart"
-        chartType="line"
-        [datasets]="plantHumidityData"
-        [labels]="plantHumidityLabels">
-      </canvas>
-      <div class="info-label">
-        {{ dateRange }}
+    <div class="spinner-group">
+      <app-spinner *ngIf="!getAvailablePlantsLoading && getPlantHumidityLoading" class="chart-spinner"></app-spinner>
+
+      <div *ngIf="!getPlantHumidityLoading && plantHumidityData && plantHumidityData.length > 0" class="chart-wrapper">
+        <div class="info-label chart-title">
+          {{ ('home.humidityLevel' | translate) }}
+        </div>
+        <canvas
+          baseChart
+          class="chart"
+          chartType="line"
+          [datasets]="plantHumidityData"
+          [labels]="plantHumidityLabels">
+        </canvas>
+        <div class="info-label">
+          {{ dateRange }}
+        </div>
       </div>
     </div>
 

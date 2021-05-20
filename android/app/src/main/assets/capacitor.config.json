@@ -1,0 +1,13 @@
+{
+  "appId": "com.matfij.wateringsystem",
+  "appName": "Watering System",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

@@ -23,6 +23,7 @@ export class SettingsPage implements OnInit {
   }
 
   updateLanguage(lang: string) {
+    console.log(lang);
     this.translateService.use(lang);
     this.storeService.setItem(LANG, lang);
   }

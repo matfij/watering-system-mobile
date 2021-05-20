@@ -39,7 +39,7 @@
     "selectPlant": "选择工厂",
     "hourInterval": "小时间隔",
     "displayTimeInfo": "显示数据",
-    "humidityLevel": "湿度水平[％]",
+    "humidityLevel": "湿度水平[0 - 10]",
     "samples": "样品"
   },
   "settings": {
